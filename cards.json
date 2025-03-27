@@ -1,0 +1,26 @@
+[
+    {
+        "id": "kaoyan",
+        "title": "考研结局",
+        "description": "doro闭关修炼，最终成功上岸理想院校！",
+        "image": "ending/kaoyan_ending.jpg"
+    },
+    {
+        "id": "moyu",
+        "title": "摸鱼结局",
+        "description": "doro巧妙平衡工作与休息，成为摸鱼大师！",
+        "image": "ending/moyu_ending.jpg"
+    },
+    {
+        "id": "neijuan",
+        "title": "内卷结局",
+        "description": "doro不慎陷入内卷漩涡，需要寻找新的出路。",
+        "image": "ending/neijuan_ending.jpg"
+    },
+    {
+        "id": "tangying",
+        "title": "躺赢结局",
+        "description": "doro运气爆棚，意外获得完美结局！",
+        "image": "ending/tangying_ending.jpg"
+    }
+]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所有结局</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>所有可能结局</h1>
+        <button onclick="location.href='index.html'">返回抽卡页面</button>
+        <div class="cards-grid" id="cardsGrid"></div>
+    </div>
+
+    <script>
+        const cardsGrid = document.getElementById('cardsGrid');
+
+        // 初始化所有卡片预览
+        function initAllCards(cards) {
+            cardsGrid.innerHTML = cards.map(card => `
+                <div class="card-preview">
+                    <img src="${card.image}" alt="${card.title}">
+                    <div class="preview-info">
+                        <h3>${card.title}</h3>
+                        <p>${card.description}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 从JSON文件中加载卡片数据
+        function loadCards() {
+            fetch('cards.json')
+                .then(response => response.json())
+                .then(data => {
+                    initAllCards(data);
+                })
+                .catch(error => {
+                    console.error('加载卡片数据失败:', error);
+                });
+        }
+
+        // 初始化页面
+        loadCards();
+    </script>
+</body>
+</html>
