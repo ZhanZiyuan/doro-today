@@ -1,0 +1,9 @@
+# .vscode/preview.yml
+autoOpen: false # 打开工作空间时是否自动开启所有应用的预览
+apps:
+  - port: 8080 # 应用的端口
+    run: npm install -g http-server && http-server -c-1 # 应用的启动命令
+    root: ./ # 应用的启动目录
+    name: HTML-CSS-JS # 应用名称
+    description: 构成网络的语言包括HTML，CSS和JavaScript。HTML提供基本结构，CSS控制格式，而JavaScript控制不同元素的行为。 # 应用描述
+    autoOpen: false # 打开工作空间时是否自动开启预览（优先级高于根级 autoOpen）
