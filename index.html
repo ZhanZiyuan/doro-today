@@ -35,6 +35,12 @@
         <p>&copy; 2025 doro's Ending Game. All rights reserved. </br> Developed by <a href="https://github.com/OppenHaix/doro-today" target="_blank">OppenHaix</a> | Images by <a href="https://x.com/Angelina_rss_" target="_blank">Angelina_rss_</a></p>
     </footer>
 
+    <!-- 模态框 -->
+    <div id="imageModal" class="modal hidden">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <script>
         const cardImg = document.querySelector('.card-img');
         const loader = document.querySelector('.loader');
@@ -112,6 +118,29 @@
 
         // 初始化页面
         loadCards();
+
+        // 获取模态框元素
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+
+        // 显示模态框，显示完整图片
+        cardImg.addEventListener('click', () => {
+            modalImage.src = cardImg.src;
+            modal.classList.add('show');
+        });
+
+        // 关闭模态框
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('show');
+        });
+
+        // 点击模态框外部关闭模态框
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
     </script>
 </body>
 </html>
