@@ -18,7 +18,7 @@
 
 ## 📸 界面预览
 
-![游戏界面](https://pic.sozbk.cn/preview.jpg)  
+![游戏界面](https://pic.sozbk.cn/preview.png)  
 *(截图仅供参考，实际效果以在线版本为准)*
 
 ## 🚀 快速开始
