@@ -19,6 +19,9 @@ h1 {
     font-size: 2rem;
     color: #333;
     margin-bottom: 1.5rem;
+    /*h1与上方边界的距离*/
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .card-container {
