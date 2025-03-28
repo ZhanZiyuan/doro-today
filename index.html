@@ -18,8 +18,9 @@
 
         <div class="card-container">
             <div class="card">
-                <img src="ending/default_ending.jpg" alt="初始卡片" class="card-img">
+                <img src="ending/default_ending.jpg" alt="初始卡片" class="card-img hidden">
                 <div class="loader hidden"></div>
+                <div class="default-message">点击"随机抽取"开始</div>
             </div>
             <div class="card-info hidden">
                 <h2 class="card-title"></h2>
@@ -30,9 +31,15 @@
         <div id="saveMessage" class="hidden">请长按图片进行保存</div>
     </div>
 
+    <footer>
+        <p>&copy; 2025 Doro's Ending Game. All rights reserved. 
+        </br> Developed by <a href="https://github.com/OppenHaix/doro-today" target="_blank">OppenHaix</a> | Images by <a href="https://x.com/Angelina_rss_" target="_blank">Angelina_rss_</a></p>
+    </footer>
+
     <script>
         const cardImg = document.querySelector('.card-img');
         const loader = document.querySelector('.loader');
+        const defaultMessage = document.querySelector('.default-message');
         const cardInfo = document.querySelector('.card-info');
         const cardTitle = document.querySelector('.card-title');
         const cardDescription = document.querySelector('.card-description');
@@ -64,6 +71,7 @@
         function drawCard() {
             // 显示加载动画
             cardImg.classList.add('hidden');
+            defaultMessage.classList.add('hidden');
             loader.classList.remove('hidden');
 
             fetchCardData((selectedCard) => {
