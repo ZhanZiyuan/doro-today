@@ -1,71 +1,77 @@
-# Doro Endings Today
-# 今天Doro是什么结局
-一个关于Doro结局的抽卡小游戏，基于HTML5+CSS+JS实现
-当前仓库并不是最新版代码，今晚会继续完善
+# 🐱 今天doro是什么结局？
 
-该模板包含了一个 使用HTML、JS、CSS共同编写了一个欢迎页面，启动成功后将展示欢迎页。
+![GitHub license](https://img.shields.io/github/license/OppenHaix/doro-today) 
+![GitHub stars](https://img.shields.io/github/stars/OppenHaix/doro-today?style=social)
 
-**预装环境：**`Node v18.13.0`   `pnpm` `` `yarn` `` `node-gyp`  `git` 等。
+一个充满惊喜的网页小游戏，探索doro的多种趣味结局！🎮
 
-注：npm & yarn默认配置了腾讯云仓库。
+**[🕹️ 立即体验](https://pic.sozbk.cn)** | **[🐛 提交建议](https://github.com/OppenHaix/doro-today/issues)**
 
-## 二、快速开始
+## ✨ 项目特色
 
-使用如下命令，快速运行一个LeaferJS 程序：
+- 🎴 **精美卡片设计** - 580x817高清结局插画，沉浸式体验
+- 🎲 **随机抽取机制** - 每次点击都有未知惊喜
+- 📱 **响应式布局** - 完美适配手机/平板/电脑
+- 💾 **本地保存功能** - 珍藏你的特别结局
+- 🌀 **3D翻转动画** - 丝滑的卡片交互效果
+- 📚 **全结局图鉴** - 收集所有隐藏故事
 
-```
-// 安装http-server
-npm install -g http-server
-// 启动   -c-1 缓存时间设置（-1 禁用缓存）
-http-server -c-1
-```
+## 📸 界面预览
 
-**输出结果：**
+![游戏界面](https://pic.sozbk.cn/preview.jpg)  
+*(截图仅供参考，实际效果以在线版本为准)*
 
-<img title="" src="img/output.png" alt="" width="261">
+## 🚀 快速开始
 
-### 三.  文件结构
-
-```
-workspace/
-├── .vscode 
-│   └── preview.yml   // Cloud Studio 配置文件（运行、预览等）
-├── index.html          // 默认访问页
-├── script.js         // JavaScript 脚本
-├── style.css         // CSS 样式脚本
-├── README.md         // 项目说明文档
-├── img               // readme图片目录
-|   └── ...                
+### 本地运行
+```bash
+git clone https://github.com/OppenHaix/doro-today.git
+cd doro-today
+# 将结局图片放入 /ending 目录
+# 使用Live Server等工具运行index.html
 ```
 
-### 2.  HTML-CSS-JS官方文档与资源
+### 项目结构
+```
+doro-today/
+├── ending/               # 结局图片目录
+│   ├── kaoyan_ending.jpg
+│   └── moyu_ending.jpg...
+├── index.html            # 主界面
+├── README.md             # 说明文档
+└── LICENSE               # MIT许可证
+```
 
-[使用 <mark>HTML </mark>构建 Web - 学习 Web 开发 | MDN](https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Structuring_content)
+## 🌟 开发计划
 
-[JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+- [x] 基础抽卡功能
+- [x] 移动端适配
+- [ ] 成就系统
+- [ ] 分享功能
+- [ ] 音效支持
+- [ ] 多语言版本
 
-[CSS：层叠样式表 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
+## 🤝 参与贡献
 
-[http-server](https://www.npmjs.com/package/http-server)
+欢迎通过 Issue 提交建议，或通过 Pull Request 参与开发：
 
-## 三、  常见问题
+1. Fork 本仓库
+2. 创建分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交修改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送分支 (`git push origin feature/AmazingFeature`)
+5. 发起 Pull Request
 
-[Cloud Studio（云端 IDE） 常见问题-文档中心-腾讯云](https://cloud.tencent.com/document/product/1039/33505)
+## 📜 使用协议
 
-[Cloud Studio（云端 IDE） | Cloud Studio](https://ide.cloud.tencent.com/docs/)
+本项目采用 [MIT License](LICENSE) 开源，请遵守以下约定：
+- 允许自由使用及修改
+- 需保留原始授权信息
+- 禁止用于违法用途
 
-[Cloud Studio 轻量版 帮助文档](https://docs.qq.com/aio/DRUFZcHVvZlJuY3l2?p=1QOiTiIR9g0KMJneBDyfgM)
+## 📮 联系我们
 
-## 帮助和支持
+如有任何问题，欢迎通过以下方式联系：
+- 🐞 [GitHub Issues](https://github.com/OppenHaix/doro-today/issues)
+- 📧 邮箱：notdalao@foxmail.com
 
-##### 欢迎加入Cloud Studio用户反馈群
-
-当您遇到问题需要处理时，您可以直接通过到扫码进入Cloud Studio用户群进行提问.
-
-- 腾讯云工程师实时群内答疑
-
-- 扫码入群可先享受产品上新功能
-
-- 更多精彩活动群内优享
-
-<img title="" src="img/qr-code.png" alt="qr-code.png" width="270">
+---
