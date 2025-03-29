@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>今天doro是什么结局</title>
+    <title>今天Doro是什么结局</title>
     <link rel="stylesheet" href="css/style.css">
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"3LhJvScLNperMRZr",ck:"3LhJvScLNperMRZr",autoTrack:true,hashMode:true})</script>
 </head>
 <body>
     <div class="container">
-        <h1>今天doro是什么结局？</h1>
-        
+        <h1 id="pageTitle"></h1>
+
         <div class="button-group">
-            <button id="drawBtn">随机抽取</button>
-            <button id="saveBtn" class="hidden">保存结局</button>
-            <button onclick="location.href='all_endings.html'">查看所有结局</button>
+            <button id="drawBtn"></button>
+            <button id="saveBtn" class="hidden"></button>
+            <button id="allEndingsBtn"></button>
         </div>
 
         <div class="card-container">
             <div class="card">
                 <img src="ending/default_ending.jpg" alt="初始卡片" class="card-img hidden">
                 <div class="loader hidden"></div>
-                <div class="default-message">点击"随机抽取"开始</div>
+                <div id="defaultMessage"></div>
             </div>
             <div class="card-info hidden">
                 <h2 class="card-title"></h2>
@@ -28,11 +30,11 @@
             </div>
         </div>
 
-        <div id="saveMessage" class="hidden">请长按图片进行保存</div>
+        <div id="saveMessage" class="hidden"></div>
     </div>
 
     <footer>
-        <p>&copy; 2025 doro's Ending Game. All rights reserved. </br> Developed by <a href="https://github.com/OppenHaix/doro-today" target="_blank">OppenHaix</a> | Images by <a href="https://x.com/Angelina_rss_" target="_blank">Angelina_rss_</a></p>
+        <p id="footerText"></p>
     </footer>
 
     <!-- 模态框 -->
@@ -41,106 +43,6 @@
         <img class="modal-content" id="modalImage">
     </div>
 
-    <script>
-        const cardImg = document.querySelector('.card-img');
-        const loader = document.querySelector('.loader');
-        const defaultMessage = document.querySelector('.default-message');
-        const cardInfo = document.querySelector('.card-info');
-        const cardTitle = document.querySelector('.card-title');
-        const cardDescription = document.querySelector('.card-description');
-        const drawBtn = document.getElementById('drawBtn');
-        const saveBtn = document.getElementById('saveBtn');
-        const saveMessage = document.getElementById('saveMessage');
-
-        let lastCardId = null;
-        let cards = [];
-
-        // 在标点符号后面插入换行符
-        function formatDescription(description) {
-            return description.replace(/([，。！？；])/g, '$1\n');
-        }
-
-        // 模拟异步请求获取卡片数据
-        function fetchCardData(callback) {
-            setTimeout(() => {
-                let randomIndex;
-                do {
-                    randomIndex = Math.floor(Math.random() * cards.length);
-                } while (cards[randomIndex].id === lastCardId);
-
-                lastCardId = cards[randomIndex].id;
-                callback(cards[randomIndex]);
-            }, 30); // 模拟网络延迟
-        }
-
-        function drawCard() {
-            // 显示加载动画
-            cardImg.classList.add('hidden');
-            defaultMessage.classList.add('hidden');
-            loader.classList.remove('hidden');
-
-            fetchCardData((selectedCard) => {
-                // 更新内容
-                cardImg.src = selectedCard.image;
-                cardTitle.textContent = selectedCard.title;
-                cardDescription.textContent = formatDescription(selectedCard.description);
-                
-                // 隐藏加载动画，显示图片和信息
-                loader.classList.add('hidden');
-                cardImg.classList.remove('hidden');
-                cardInfo.classList.remove('hidden');
-                saveBtn.classList.remove('hidden');
-                saveMessage.classList.add('hidden');
-            });
-        }
-
-        // 显示提示信息
-        function showSaveMessage() {
-            saveMessage.classList.remove('hidden');
-            alert('请长按图片进行保存');
-        }
-
-        // 从JSON文件中加载卡片数据
-        function loadCards() {
-            fetch('cards.json')
-                .then(response => response.json())
-                .then(data => {
-                    cards = data;
-                })
-                .catch(error => {
-                    console.error('加载卡片数据失败:', error);
-                });
-        }
-
-        // 事件监听
-        drawBtn.addEventListener('click', drawCard);
-        saveBtn.addEventListener('click', showSaveMessage);
-
-        // 初始化页面
-        loadCards();
-
-        // 获取模态框元素
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        const closeModal = document.getElementById('closeModal');
-
-        // 显示模态框，显示完整图片
-        cardImg.addEventListener('click', () => {
-            modalImage.src = cardImg.src;
-            modal.classList.add('show');
-        });
-
-        // 关闭模态框
-        closeModal.addEventListener('click', () => {
-            modal.classList.remove('show');
-        });
-
-        // 点击模态框外部关闭模态框
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.classList.remove('show');
-            }
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
