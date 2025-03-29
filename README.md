@@ -1,7 +1,10 @@
 # 🐱 今天doro是什么结局？
 
 ![GitHub license](https://img.shields.io/github/license/OppenHaix/doro-today) 
+![Last commit](https://img.shields.io/github/last-commit/OppenHaix/doro-today/master)
 ![GitHub stars](https://img.shields.io/github/stars/OppenHaix/doro-today?style=social)
+
+
 
 一个充满惊喜的网页小游戏，探索doro的多种趣味结局！🎮
 
