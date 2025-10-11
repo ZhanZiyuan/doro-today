@@ -4,8 +4,6 @@
 ![Last commit](https://img.shields.io/github/last-commit/OppenHaix/doro-today/master)
 ![GitHub stars](https://img.shields.io/github/stars/OppenHaix/doro-today?style=social)
 
-
-
 一个充满惊喜的网页小游戏，探索doro的多种趣味结局！🎮
 
 **[🕹️ 立即体验](https://pic.sozbk.cn)** | **[🐛 提交建议](https://github.com/OppenHaix/doro-today/issues)**
@@ -45,6 +43,14 @@ doro-today/
 └── LICENSE               # MIT许可证
 ```
 
+## Vue 版本
+
+热心网友 **cong-zc** 已经将本项目重写为 Vue 版本，代码更具可维护性和扩展性：
+
+- **GitHub 仓库**: [cong-zc/doro-today-vue](https://github.com/cong-zc/doro-today-vue)
+
+如果你更喜欢使用 Vue 框架，或者想参与更现代化的代码重构，欢迎访问上述仓库。
+
 ## 🌟 开发计划
 
 - [x] 基础抽卡功能
@@ -76,5 +82,3 @@ doro-today/
 如有任何问题，欢迎通过以下方式联系：
 - 🐞 [GitHub Issues](https://github.com/OppenHaix/doro-today/issues)
 - 📧 邮箱：notdalao@foxmail.com
-
----
